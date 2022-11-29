@@ -452,7 +452,7 @@ cmp.setup {
 -- vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<cr>', { silent =true })
 vim.cmd('set clipboard+=unnamedplus')
 
-map('n', '<leader>t', '<cmd>NeoTreeShowToggle<CR>')
+map('n', '<leader>t', '<cmd>NeoTreeFloatToggle<CR>')
 map('n', '<leader><leader>h', '<C-w>h')
 map('n', '<leader><leader>l', '<C-w>l')
 map('n', '<leader><leader>j', '<C-w>j')
