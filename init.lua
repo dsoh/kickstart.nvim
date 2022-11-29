@@ -7,6 +7,12 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
+local function map(mode, lhs, rhs, opts)
+  local options = {noremap = true}
+  if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
@@ -39,6 +45,43 @@ require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   }
+
+    -- David plug
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+  -- disable netrw at the very start of your init.lua (strongly advised)
+  vim.g.loaded_netrw = 1
+  vim.g.loaded_netrwPlugin = 1
+  
+  -- set termguicolors to enable highlight groups
+  vim.opt.termguicolors = true
+  
+  -- empty setup using defaults
+  require("nvim-tree").setup()
+  
+  -- OR setup with some options
+  require("nvim-tree").setup({
+    sort_by = "case_sensitive",
+    view = {
+      adaptive_size = true,
+      mappings = {
+        list = {
+          { key = "u", action = "dir_up" },
+        },
+      },
+    },
+    renderer = {
+      group_empty = true,
+    },
+    filters = {
+      dotfiles = true,
+    },
+  })
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
@@ -427,3 +470,9 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- david shortcuts
+-- vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<cr>', { silent =true })
+
+map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>')
+vim.cmd(':command! Q q!')
