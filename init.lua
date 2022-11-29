@@ -47,41 +47,15 @@ require('packer').startup(function(use)
   }
 
     -- David plug
-    use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-      },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
     }
-  -- disable netrw at the very start of your init.lua (strongly advised)
-  vim.g.loaded_netrw = 1
-  vim.g.loaded_netrwPlugin = 1
-  
-  -- set termguicolors to enable highlight groups
-  vim.opt.termguicolors = true
-  
-  -- empty setup using defaults
-  require("nvim-tree").setup()
-  
-  -- OR setup with some options
-  require("nvim-tree").setup({
-    sort_by = "case_sensitive",
-    view = {
-      adaptive_size = true,
-      mappings = {
-        list = {
-          { key = "u", action = "dir_up" },
-        },
-      },
-    },
-    renderer = {
-      group_empty = true,
-    },
-    filters = {
-      dotfiles = true,
-    },
-  })
+  }
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
@@ -476,5 +450,12 @@ cmp.setup {
 -- david shortcuts
 -- vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<cr>', { silent =true })
 
-map('n', '<leader>t', '<cmd>NvimTreeToggle<CR>')
+map('n', '<leader>t', '<cmd>NeoTreeShowToggle<CR>')
+map('n', '<leader><leader>h', '<C-w>h')
+map('n', '<leader><leader>l', '<C-w>l')
+map('n', '<leader><leader>j', '<C-w>j')
+map('n', '<leader><leader>k', '<C-w>k')
+map('n', '<leader>j', '<cmd>tabp<cr>')
+map('n', '<leader>k', '<cmd>tabn<cr>')
 vim.cmd(':command! Q q!')
+
