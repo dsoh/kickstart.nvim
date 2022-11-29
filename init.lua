@@ -47,6 +47,7 @@ require('packer').startup(function(use)
   }
 
     -- David plug
+  use 'EdenEast/nightfox.nvim' -- https://github.com/EdenEast/nightfox.nvim options
   use {
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
