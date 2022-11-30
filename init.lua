@@ -47,6 +47,10 @@ require('packer').startup(function(use)
   }
 
     -- David plug
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
+  use 'voldikss/vim-floaterm'
   use 'EdenEast/nightfox.nvim' -- https://github.com/EdenEast/nightfox.nvim options
   use {
   "nvim-neo-tree/neo-tree.nvim",
@@ -453,6 +457,7 @@ cmp.setup {
 vim.cmd('set clipboard+=unnamedplus')
 
 map('n', '<leader>t', '<cmd>NeoTreeFloatToggle<CR>')
+map('n', '<leader>`', '<cmd>ToggleTerm<CR>')
 map('n', '<leader><leader>h', '<C-w>h')
 map('n', '<leader><leader>l', '<C-w>l')
 map('n', '<leader><leader>j', '<C-w>j')

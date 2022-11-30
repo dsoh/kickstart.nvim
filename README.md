@@ -3,6 +3,7 @@
 based off of kickstart.vim with custom shortcuts added
 
 ```lua
+<leader>` -- open terminal
 <leader>? -- find in recently opened files
 <leader>/ -- find in current buffer
 <leader>sf -- search files
