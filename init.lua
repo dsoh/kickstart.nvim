@@ -8,7 +8,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 local function map(mode, lhs, rhs, opts)
-  local options = {noremap = true}
+  local options = { noremap = true }
   if opts then options = vim.tbl_extend('force', options, opts) end
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
@@ -46,16 +46,16 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   }
 
-    -- David plug
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  -- David plug
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
-  end}
+  end }
   use 'voldikss/vim-floaterm'
   use 'EdenEast/nightfox.nvim' -- https://github.com/EdenEast/nightfox.nvim options
   use {
-  "nvim-neo-tree/neo-tree.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
-    requires = { 
+    requires = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
@@ -219,7 +219,8 @@ pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-vim.keymap.set('n', '<leader><leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader><leader><space>', require('telescope.builtin').buffers,
+  { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
@@ -398,8 +399,8 @@ require('lspconfig').sumneko_lua.setup {
         globals = { 'vim' },
       },
       workspace = { library = vim.api.nvim_get_runtime_file('', true),
-      checkThirdParty = false,
-     },
+        checkThirdParty = false,
+      },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = { enable = false },
     },
@@ -452,7 +453,7 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
--- david shortcuts
+-- david shortcuts personal
 -- vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<cr>', { silent =true })
 vim.cmd('set clipboard+=unnamedplus')
 
@@ -465,4 +466,3 @@ map('n', '<leader><leader>k', '<C-w>k')
 map('n', '<leader>j', '<cmd>tabp<cr>')
 map('n', '<leader>k', '<cmd>tabn<cr>')
 vim.cmd(':command! Q q!')
-
