@@ -319,6 +319,26 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
 
+  nmap('<leader>gg', function()
+    local Terminal = require("toggleterm.terminal").Terminal
+    local lazygit = Terminal:new {
+      cmd = "lazygit",
+      hidden = true,
+      direction = "float",
+      float_opts = {
+        border = "none",
+        width = 100000,
+        height = 100000,
+      },
+      on_open = function(_)
+        vim.cmd "startinsert!"
+      end,
+      on_close = function(_) end,
+      count = 99,
+    }
+    lazygit:toggle()
+  end, 'lazygit')
+
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
