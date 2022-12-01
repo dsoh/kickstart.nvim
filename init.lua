@@ -473,7 +473,7 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
--- david shortcuts personal
+-- david shortcuts for kickstart
 -- vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<cr>', { silent =true })
 vim.cmd('set clipboard+=unnamedplus')
 
