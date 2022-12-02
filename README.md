@@ -20,3 +20,10 @@ based off of kickstart.vim with custom shortcuts added
 
 :Q -- quit all :q!
 ```
+
+### Requirements
+
+```lua
+a nerd font is required for neo tree - https://www.nerdfonts.com/font-downloads
+lazygit is required for <leader>gg - https://github.com/jesseduffield/lazygit
+```
