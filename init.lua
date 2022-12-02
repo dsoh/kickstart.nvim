@@ -47,6 +47,9 @@ require('packer').startup(function(use)
   }
 
   -- David plug
+  use "terrortylor/nvim-comment"
+  require('nvim_comment').setup()
+  use 'tanvirtin/monokai.nvim'
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end }
@@ -184,9 +187,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'nightfox',
-    component_separators = '|',
-    section_separators = '',
+    theme = 'powerline',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
   },
 }
 
@@ -471,7 +474,8 @@ cmp.setup {
 vim.cmd('set clipboard+=unnamedplus')
 
 map('n', '<leader>o', '<cmd>NeoTreeFloatToggle<CR>')
-map('n', '<leader>`', '<cmd>ToggleTerm<CR>')
+map('n', '<leader>`', "<cmd>ToggleTerm<CR>")
+map('n', '<leader>c', '<cmd>CommentToggle<CR>')
 map('n', '<leader><leader>h', '<C-w>h')
 map('n', '<leader><leader>l', '<C-w>l')
 map('n', '<leader><leader>j', '<C-w>j')
