@@ -27,6 +27,7 @@ based off of kickstart.vim with custom shortcuts added and a few more addons suc
 <leader><leader>j -- move window down
 <leader><leader>k -- move window down
 <leader><leadem>s -- jump to letter
+<leader>c -- comment line or selected block
 
 :Q -- quit all same as :qa!
 ```

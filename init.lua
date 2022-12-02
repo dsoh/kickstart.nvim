@@ -503,6 +503,7 @@ vim.keymap.set('n', '<leader>gg', function()
   lazygit:toggle()
 end, { desc = 'lazygit'})
 
+vim.cmd(':vmap <leader>c :CommentToggle<CR>')
 vim.cmd(':command! Q qa!')
 vim.cmd(':set noet ci pi sts=0 sw=4 ts=4')
 
