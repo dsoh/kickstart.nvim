@@ -73,7 +73,6 @@ require('packer').startup(function(use)
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   }
-  -- david config
   -- end david
 
   -- Git related plugins
@@ -470,7 +469,6 @@ cmp.setup {
 -- vim: ts=2 sts=2 sw=2 et
 
 -- david shortcuts
--- vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<cr>', { silent =true })
 vim.cmd('set clipboard+=unnamedplus')
 
 map('n', '<leader>o', '<cmd>NeoTreeFloatToggle<CR>')
