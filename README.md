@@ -1,6 +1,11 @@
 ### Introduction
 
-based off of kickstart.vim with custom shortcuts added
+based off of kickstart.vim with custom shortcuts added and a few more addons such as
+- lazygit
+- hop (like easymotion)
+- floatterm (terminal access within neovim)
+- bufferline (better tabs)
+- neotree (file browser)
 
 ```lua
 <leader> is set to spacebar
