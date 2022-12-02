@@ -3,6 +3,8 @@
 based off of kickstart.vim with custom shortcuts added
 
 ```lua
+<leader> is set to spacebar
+
 <leader>gg -- lazy git
 <leader>` -- open terminal
 <leader>? -- find in recently opened files
