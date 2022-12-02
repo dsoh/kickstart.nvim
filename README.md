@@ -25,6 +25,14 @@ based off of kickstart.vim with custom shortcuts added
 ### Requirements
 
 ```lua
+ripgrep is required for grep search - https://github.com/BurntSushi/ripgrep
 a nerd font is required for neo tree - https://www.nerdfonts.com/font-downloads
 lazygit is required for <leader>gg - https://github.com/jesseduffield/lazygit
+```
+
+
+### Installation
+
+```
+cp init.lua ~/.config/nvim/
 ```
