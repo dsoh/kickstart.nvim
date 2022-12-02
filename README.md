@@ -6,6 +6,7 @@ based off of kickstart.vim with custom shortcuts added and a few more addons suc
 - floatterm (terminal access within neovim)
 - bufferline (better tabs)
 - neotree (file browser)
+- nvim-comment (comment out code)
 
 ### Custom Shortcuts
 
