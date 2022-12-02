@@ -61,6 +61,9 @@ require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  -- david config
+  -- end david
 
   -- Git related plugins
   use 'tpope/vim-fugitive'
@@ -486,4 +489,4 @@ vim.keymap.set('n', '<leader>gg', function()
   lazygit:toggle()
 end, { desc = 'lazygit'})
 
-vim.cmd(':command! Q q!')
+vim.cmd(':command! Q qa!')
