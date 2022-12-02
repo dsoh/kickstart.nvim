@@ -2,8 +2,6 @@
 
 based off of kickstart.vim with custom shortcuts added
 
-leader is set to spacebar
-
 ```lua
 <leader>gg -- lazy git
 <leader>` -- open terminal
@@ -21,7 +19,7 @@ leader is set to spacebar
 <leader><leader>k -- move window down
 <leader><leadem>s -- jump to letter
 
-:Q -- quit all :q!
+:Q -- quit all same as :qa!
 ```
 
 ### Requirements
