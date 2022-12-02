@@ -2,6 +2,8 @@
 
 based off of kickstart.vim with custom shortcuts added
 
+leader is set to spacebar
+
 ```lua
 <leader>gg -- lazy git
 <leader>` -- open terminal
