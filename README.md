@@ -17,6 +17,7 @@ based off of kickstart.vim with custom shortcuts added
 <leader><leader>l -- move window right
 <leader><leader>j -- move window down
 <leader><leader>k -- move window down
+<leader><leadem>s -- jump to letter
 
 :Q -- quit all :q!
 ```
