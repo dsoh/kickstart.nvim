@@ -7,6 +7,8 @@ based off of kickstart.vim with custom shortcuts added and a few more addons suc
 - bufferline (better tabs)
 - neotree (file browser)
 
+### Custom Shortcuts
+
 ```lua
 <leader> is set to spacebar
 
