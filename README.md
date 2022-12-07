@@ -41,6 +41,8 @@ a nerd font is required for neo tree icons - https://www.nerdfonts.com/font-down
 
 lazygit is required for <leader>gg - https://github.com/jesseduffield/lazygit
 
+tsserver - https://github.com/typescript-language-server/typescript-language-server#installing
+
 
 ### Installation
 
