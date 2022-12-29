@@ -685,8 +685,8 @@ map('n', '<leader><leader>h', '<C-w>h')
 map('n', '<leader><leader>l', '<C-w>l')
 map('n', '<leader><leader>j', '<C-w>j')
 map('n', '<leader><leader>k', '<C-w>k')
-map('n', '<leader>j', '<cmd>tabp<cr>')
-map('n', '<leader>k', '<cmd>tabn<cr>')
+map('n', '<leader>j', '<cmd>Tabprevious<cr>')
+map('n', '<leader>k', '<cmd>Tabnext<cr>')
 
 vim.keymap.set('n', '<leader>gg', function()
   local Terminal = require("toggleterm.terminal").Terminal
